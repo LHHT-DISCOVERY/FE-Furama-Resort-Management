@@ -1,0 +1,74 @@
+<header>
+  <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #FDEFFD">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">
+        <img src="assets/images/logo.png" alt="A04Cinema" width="365" height="85">
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+              aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item text-uppercase "  >
+            <a class="nav-link" style="cursor: pointer;">Đặt Phòng</a>
+          </li>
+          <li class="nav-item dropdown text-uppercase">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+               aria-expanded="false">
+              Phòng
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li><a class="dropdown-item booking"  style="cursor: pointer;">Phòng VIP</a></li>
+              <li><a class="dropdown-item booking"  style="cursor: pointer;">Phòng Standard</a></li>
+            </ul>
+          </li>
+          <li class="nav-item text-uppercase">
+            <a class="nav-link"  style="cursor: pointer;">Khuyến mãi</a>
+          </li>
+        </ul>
+        <div class="col-5 m-4 d-flex align-items-center">
+          <input #nameMovie type="search" class="form-control bg-light my-1" placeholder="Tìm kiếm tên Phòng..."
+          >
+          <button class="btn my-1 mx-1" style="background-color: #54B435; color: white"
+          >
+            <i class="bi bi-search"></i>
+          </button>
+        </div>
+        <div class="dropdown m-6 user-profile d-flex align-items-center">
+          <a href="#" class="d-flex align-items-center link-dark text-decoration-none dropdown-toggle"
+             id="dropdownUser" data-bs-toggle="dropdown" aria-expanded="false">
+            <img src="assets/image/account.png" alt="" width="32" height="32px" class="rounded-circle me-2">
+            <strong style="color: #54B435" ></strong>
+<!--            <strong style="color: #54B435" >ADMIN</strong>-->
+<!--            <strong >NHÂN VIÊN: <span style="color: #54B435" ></span></strong>-->
+          </a>
+          <ul class="dropdown-menu text-small" aria-labelledby="dropdownUser1"
+             >
+            <!--            <li><a class="dropdown-item" href="#">Cài đặt</a></li>-->
+            <li >
+              <a href="/customer/ticket" class="dropdown-item user-profile-management">Quản lý tài khoản</a></li>
+
+            <li >
+              <hr class="dropdown-divider">
+            </li>
+
+            <li ><a href="/ticket_management/select_ticket_user " class="dropdown-item user-profile-management">Bảng Quản Lý</a></li>
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+
+            <li >
+              <a class="dropdown-item user-profile-management" >Đăng nhập</a></li>
+
+            <li  >
+              <a class="dropdown-item user-profile-management" >Đăng xuất</a></li>
+
+            <li  >
+              <a class="dropdown-item user-profile-management" >Đăng xuất</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
