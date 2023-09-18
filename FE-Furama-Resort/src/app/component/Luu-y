@@ -60,6 +60,6 @@ vd : trong module con do ta tạo có component : về Information , Quản lý 
 
 
 :: Lưu ý chung : tất cả khi cấu hình path ở roter ko có kí tự "/"
- nhưng khi sử dụng ở thẻ a để chuyển đổi qua lại giữa các component thì sử dụng "/"
+ nhưng khi sử dụng ở thẻ a để chuyển đổi qua lại giữa các component thì sử dụng "/" ..
 
 -->
