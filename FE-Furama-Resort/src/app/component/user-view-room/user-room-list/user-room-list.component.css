@@ -77,6 +77,10 @@ h5 {
   text-overflow: ellipsis;
 }
 
+.bg{
+  background-color: #91B4D8;
+}
+
 
 .hovereffect {
   width: 100%;
@@ -85,7 +89,7 @@ h5 {
   overflow: hidden;
   position: relative;
   text-align: center;
-  cursor: default;
+  cursor: pointer;
 }
 
 .hovereffect .overlay {

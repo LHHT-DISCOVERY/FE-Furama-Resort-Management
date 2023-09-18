@@ -52,3 +52,27 @@ body {
   cursor: pointer;
   border-radius: 3px;
 }
+
+.search-container {
+  position: relative;
+  width: 300px; /* Độ rộng của container */
+}
+
+/* Định dạng cho ô nhập */
+.search-input {
+  width: 100%; /* Lấp đầy toàn bộ container */
+  padding: 5px;
+}
+
+/* Định dạng cho nút tìm kiếm */
+.search-button {
+  position: absolute;
+  right: 1px; /* Khoảng cách từ phía bên phải của container */
+  top: 50%; /* Đưa nút lên giữa theo chiều dọc */
+  transform: translateY(-50%);
+  background-color: #4CAF50; /* Màu nền nút */
+  color: white; /* Màu chữ trên nút */
+  border: none;
+  padding: 4px 8px; /* Độ rộng và độ cao của nút */
+  cursor: pointer;
+}
