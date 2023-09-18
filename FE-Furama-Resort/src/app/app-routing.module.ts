@@ -1,22 +1,19 @@
-import { NgModule } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
-import {UserViewRoomModule} from "./component/user-view-room/user-view-room.module";
+import {NgModule} from '@angular/core';
+import {RouterModule, Routes} from '@angular/router';
 import {UserRoomListComponent} from "./component/user-view-room/user-room-list/user-room-list.component";
-import {HeaderCommonComponent} from "./component/header/header-common/header-common.component";
 
 const routes: Routes = [
   {
     path: "",
-    component: UserRoomListComponent
-  },
-  {
-    path:"login" ,
-    component: HeaderCommonComponent
+    component: UserRoomListComponent,
   }
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [
+    RouterModule.forRoot(routes)
+  ],
   exports: [RouterModule]
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {
+}

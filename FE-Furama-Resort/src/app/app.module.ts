@@ -1,12 +1,12 @@
-import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
+import {NgModule} from '@angular/core';
+import {BrowserModule} from '@angular/platform-browser';
 
-import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
-import { FooterComponent } from './component/footer/footer.component';
-import { HeaderAdminComponent } from './component/header/header-admin/header-admin.component';
-import { HeaderCommonComponent } from './component/header/header-common/header-common.component';
-import { SlidebarComponent } from './component/slidebar/slidebar.component';
+import {AppRoutingModule} from './app-routing.module';
+import {AppComponent} from './app.component';
+import {FooterComponent} from './component/footer/footer.component';
+import {HeaderAdminComponent} from './component/header/header-admin/header-admin.component';
+import {HeaderCommonComponent} from './component/header/header-common/header-common.component';
+import {SlidebarComponent} from './component/slidebar/slidebar.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +18,8 @@ import { SlidebarComponent } from './component/slidebar/slidebar.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+
   ],
   providers: [],
   exports: [
@@ -27,4 +28,5 @@ import { SlidebarComponent } from './component/slidebar/slidebar.component';
   ],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+}
