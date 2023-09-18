@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import {Component} from '@angular/core';
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-header-common',
@@ -6,5 +7,12 @@ import { Component } from '@angular/core';
   styleUrls: ['./header-common.component.css']
 })
 export class HeaderCommonComponent {
+  constructor(private router: Router) {
+
+  }
+
+  toLogin() {
+    this.router.navigateByUrl("/login");
+  }
 
 }
