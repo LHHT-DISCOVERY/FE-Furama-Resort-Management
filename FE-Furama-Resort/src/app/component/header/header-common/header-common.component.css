@@ -10,6 +10,7 @@ body {
   overflow-x: hidden;
 }
 
+
 .dropdown:hover > .dropdown-menu {
   display: block;
   top: 100%; /* Hiển thị dropdown-menu bên dưới */
@@ -27,11 +28,14 @@ body {
   color: #54B435;
 }
 
+
+
 .navbar-light .navbar-nav .nav-link:hover {
-  background-color: #54B435;
-  color: white;
+  color: #54B435;
   cursor: pointer;
   border-radius: 2px;
+  border-bottom: #54B435 solid 3px;
+  margin-bottom: 1px;
 }
 
 .user-profile {
@@ -53,6 +57,8 @@ body {
   border-radius: 3px;
 }
 
+/* định dang search ở phía header*/
+
 .search-container {
   position: relative;
   width: 300px; /* Độ rộng của container */
@@ -73,6 +79,6 @@ body {
   background-color: #4CAF50; /* Màu nền nút */
   color: white; /* Màu chữ trên nút */
   border: none;
-  padding: 4px 8px; /* Độ rộng và độ cao của nút */
+  padding: 4px 8px; /* Độ rộng và độ ca o của nút */
   cursor: pointer;
 }
