@@ -6,7 +6,12 @@ const routes: Routes = [
   {
     path: "",
     component: UserRoomListComponent,
-  }
+  },
+  {
+    path: "room",
+    loadChildren: () => import('./component/user-view-room/user-view-room.module').then(module => module.UserViewRoomModule)
+  },
+
 ];
 
 @NgModule({

@@ -25,13 +25,13 @@ body {
 
 
 .navbar-light .navbar-nav .nav-link {
-  color: #54B435;
+  color: white;
 }
 
 
 
 .navbar-light .navbar-nav .nav-link:hover {
-  color: #54B435;
+  color:white;
   cursor: pointer;
   border-radius: 2px;
   border-bottom: #54B435 solid 3px;
@@ -50,6 +50,13 @@ body {
   border-radius: 2px;
 }
 
+header{
+  height: 100vh;
+  width: 100%;
+  background-image: url("src/bg.jpg");
+  background-size: 100%;
+  background-repeat: repeat-y;
+}
 .user-profile .user-profile-management:hover {
   background-color: #54B435;
   color: white;

@@ -3,7 +3,9 @@ import { RouterModule, Routes } from '@angular/router';
 import {LoginComponent} from "./login/login.component";
 
 const routes: Routes = [
-  {path :'login' , component: LoginComponent}
+  //  cấu hình 'login' để sử dụng khi module header gọi đến module security
+  {path :'login' , component: LoginComponent},
+  {path:'**', redirectTo: '', pathMatch: 'full'}
 ];
 
 @NgModule({

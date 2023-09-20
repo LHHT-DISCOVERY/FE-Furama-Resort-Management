@@ -1,79 +1,82 @@
 <header>
-  <!-- navbar-expand Hiệu ứng mobile-->
-  <nav class="navbar navbar-expand-lg navbar-light">
-    <div class="container-fluid header-sd  ">
-      <div class="col-md-2 ">
-        <a class="navbar-brand" href="#">
-          <img src="assets/images/logo.png" alt="A04Cinema" width="200" height="55">
-        </a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-      </div>
+    <!-- navbar-expand Hiệu ứng mobile-->
+    <nav class="navbar navbar-expand-lg navbar-light">
+      <div class="container-fluid header-sd">
+        <div class="col-md-2 my-4">
+          <a class="navbar-brand" href="#">
+            <img src="assets/images/logo.png" alt="A04Cinema" width="200" height="55">
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+                  aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        </div>
 
-      <div class="col-md-10 ">
-        <div class="collapse navbar-collapse " id="navbarSupportedContent">
-          <ul class="navbar-nav me-auto d-flex align-items-center">
-            <li class="nav-item text-uppercase  mx-3">
-              <a class="nav-link" style="cursor: pointer;">Đặt Phòng</a>
-            </li>
-            <li class="nav-item dropdown text-uppercase  mx-3">
-              <a class="nav-link dropdown-toggle  " href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
-                 aria-expanded="false">
-                Phòng
-              </a>
-              <ul class="dropdown-menu my-0" aria-labelledby="navbarDropdown">
-                <li><a class="dropdown-item booking" style="cursor: pointer;">Phòng VIP</a></li>
-                <li><a class="dropdown-item booking" style="cursor: pointer;">Phòng Standard</a></li>
-              </ul>
-            </li>
-            <li class="nav-item text-uppercase  mx-3">
-              <a class="nav-link" style="cursor: pointer;">Khuyến mãi</a>
-            </li>
-            <li class="nav-item text-uppercase  mx-3">
-              <a class="nav-link" style="cursor: pointer;">Hỗ trợ</a>
-            </li>
+        <div class="col-md-10 ">
+          <div class="collapse navbar-collapse " id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto d-flex align-items-center">
+              <li class="nav-item text-uppercase  mx-3">
+                <a class="nav-link" style="cursor: pointer;">Trang chủ</a>
+              </li>
+              <li class="nav-item text-uppercase  mx-3">
+                <a class="nav-link" style="cursor: pointer;">Đặt Phòng</a>
+              </li>
+              <li class="nav-item dropdown text-uppercase  mx-3">
+                <a class="nav-link dropdown-toggle  " href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+                   aria-expanded="false">
+                  Phòng
+                </a>
+                <ul class="dropdown-menu my-0" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item booking" style="cursor: pointer;">Phòng VIP</a></li>
+                  <li><a class="dropdown-item booking" style="cursor: pointer;">Phòng Standard</a></li>
+                </ul>
+              </li>
+              <li class="nav-item text-uppercase  mx-3">
+                <a class="nav-link" style="cursor: pointer;">Khuyến mãi</a>
+              </li>
+              <li class="nav-item text-uppercase  mx-3">
+                <a class="nav-link" style="cursor: pointer;">Hỗ trợ</a>
+              </li>
 
-            <li class="nav-item text-uppercase mx-3">
-<!--              custom search in header-->
-              <div class=" mx-4 search-container">
-                <input type="search" class="form-control bg-light search-input " style="border-radius: 15px"
-                       placeholder="  Tìm kiếm tên Phòng..."
-                >
-                <button class="btn search-button" style="background-color: #54B435; color: white; border-radius: 15px"
-                >
-                  <i class="bi bi-search"></i>
-                </button>
-              </div>
-            </li>
-          </ul>
-          <div class="dropdown mx-lg-6 user-profile d-flex justify-content-start" >
-            <a href="#" class="d-flex align-items-center link-dark text-decoration-none dropdown-toggle"
-               id="dropdownUser" data-bs-toggle="dropdown" aria-expanded="false">
-              <img src="assets/image/account.png" alt="" width="32px" height="32px" class="rounded-circle me-2">
-              <strong style="color: #54B435"></strong>
-              <!--            <strong style="color: #54B435" >ADMIN</strong>-->
-              <!--            <strong >NHÂN VIÊN: <span style="color: #54B435" ></span></strong>-->
-            </a>
-            <ul class="dropdown-menu text-small" aria-labelledby="dropdownUser1"
-            >
-
-
-              <li>
-                <a class="dropdown-item user-profile-management" routerLink="/login">Đăng nhập</a></li>
-
-              <li>
-                <!--              <a class="dropdown-item user-profile-management">Đăng xuất</a></li>-->
-
-                <!--            <li>-->
-                <!--              <a class="dropdown-item user-profile-management">Đăng xuất</a></li>-->
+              <li class="nav-item text-uppercase mx-3">
+                <!--              custom search in header-->
+                <div class=" mx-4 search-container">
+                  <input type="search" class="form-control bg-light search-input " style="border-radius: 15px"
+                         placeholder="  Tìm kiếm tên Phòng..."
+                  >
+                  <button class="btn search-button" style="background-color: #54B435; color: white; border-radius: 15px"
+                  >
+                    <i class="bi bi-search"></i>
+                  </button>
+                </div>
+              </li>
             </ul>
+            <div class="dropdown mx-lg-6 user-profile d-flex justify-content-start">
+              <a href="#" class="d-flex align-items-center link-dark text-decoration-none dropdown-toggle"
+                 id="dropdownUser" data-bs-toggle="dropdown" aria-expanded="false">
+                <img src="assets/image/account.png" alt="" width="32px" height="32px" class="rounded-circle me-2">
+                <strong style="color: #54B435"></strong>
+                <!--            <strong style="color: #54B435" >ADMIN</strong>-->
+                <!--            <strong >NHÂN VIÊN: <span style="color: #54B435" ></span></strong>-->
+              </a>
+              <ul class="dropdown-menu text-small" aria-labelledby="dropdownUser1"
+              >
+
+
+                <li>
+                  <a class="dropdown-item user-profile-management" (click)="toLogin()">Đăng nhập</a></li>
+
+                <li>
+                  <!--              <a class="dropdown-item user-profile-management">Đăng xuất</a></li>-->
+
+                  <!--            <li>-->
+                  <!--              <a class="dropdown-item user-profile-management">Đăng xuất</a></li>-->
+              </ul>
+            </div>
           </div>
         </div>
-        </div>
       </div>
-  </nav>
-</header>
+    </nav>
+  </header>
 
 

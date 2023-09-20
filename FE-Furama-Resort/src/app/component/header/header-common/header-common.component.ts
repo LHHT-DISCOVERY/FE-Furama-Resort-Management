@@ -12,6 +12,7 @@ export class HeaderCommonComponent {
   }
 
   toLogin() {
+    // cấu hình "/login"  giống path của file routing trong security module
     this.router.navigateByUrl("/login");
   }
 
