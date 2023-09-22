@@ -11,6 +11,7 @@ const httpOptions = {
 @Injectable({
   providedIn: 'root'
 })
+// 0. tạo service call API cho module security
 export class SecurityService {
 
   constructor(private httpClient: HttpClient) {
@@ -18,7 +19,9 @@ export class SecurityService {
 
   login(obj: Account): Observable<any> {
     return this.httpClient.post(AUTH_API, {
-      userName: obj.accountName,
+      // username và password đúng với body ở postman
+      // đúng nếu ko sảy ra 403
+      username: obj.accountName,
       password: obj.password
     }, httpOptions)
   }
