@@ -1,5 +1,5 @@
 import {Component, OnInit} from '@angular/core';
-import {FormBuilder, FormGroup} from "@angular/forms";
+import {FormBuilder, FormGroup, Validators} from "@angular/forms";
 import {SecurityService} from "../../../service/security/security.service";
 import {ActivatedRoute, Router} from "@angular/router";
 import {Token} from "../../../model/token";
@@ -14,6 +14,7 @@ import {TokenStorageService} from "../../../service/token/token-storage.service"
 
 // 2. tạo class để thực hiện chức năng login
 export class LoginComponent implements OnInit {
+  // Khai bảo biến trong angular v16
   token: Token | any;
   formGroup!: FormGroup;
   accountName: string = "";
@@ -30,10 +31,13 @@ export class LoginComponent implements OnInit {
 
   ngOnInit(): void {
     this.returnUrl = this.route.snapshot.queryParams['returnUrl'];
-    //  Phải khai báo Form để lấy data từ FE về call API
+    //  Phải khai báo Form và validate để lấy data từ FE về call API
     this.formGroup = this.formBuild.group({
-        accountName: [''],
-        password: [''],
+        // cú phap validate: [" ", [validator]]
+        // Error: Property 'accountName' comes from an index signature, so it must be accessed with ['accountName']
+        // => set noPropertyAccessFromIndexSignature => false => ng s -o
+        accountName: ['', [Validators.required, Validators.pattern('^[a-zA-Z0-9]+$')]],
+        password: ['', [Validators.required , Validators.minLength(8)]],
         remember_me: ['']
       }
     );
@@ -51,9 +55,9 @@ export class LoginComponent implements OnInit {
     //  lấy giá trị từ form login
     // bằng phuong thuc login call API
     this.securityService.login(this.formGroup.value).subscribe(data => {
-      // kiểm tra người chùng có chọn checkbox trong form đăng nhập ko
-      //  nếu có thì là true và thực hiện lưu trữ token và thông tin người dùng
-      //  trong local storage
+        // kiểm tra người chùng có chọn checkbox trong form đăng nhập ko
+        //  nếu có thì là true và thực hiện lưu trữ token và thông tin người dùng
+        //  trong local storage
         if (this.formGroup.value.remember_me) {
           this.tokenStorage.saveTokenLocal(data.token);
           this.tokenStorage.saveUserLocal(data);
@@ -68,7 +72,7 @@ export class LoginComponent implements OnInit {
         // xóa trắng để chuẩn bị cho lần đăng nhập tiếp theo.
         this.formGroup.reset()
         // quay lại đường dẫn trước đó
-          this.router.navigateByUrl(this.returnUrl)
+        this.router.navigateByUrl(this.returnUrl)
       }, error => {
         console.log(error)
       }

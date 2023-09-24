@@ -9,13 +9,15 @@
             <!--                      nhớ dấu ngoặc []  khi sử dụng formGroup khi đó mới sd được (ngSubmit)  và phải được sử dụng trong thẻ form -->
             <form class="form-signin" [formGroup]="formGroup" (ngSubmit)="onSubmit()">
               <div class="form-label-group">
-                <!--                              tương ưng trên mỗi ô input cần khai báo formControlName tương ứng để sử dụng Form trong angular-->
+                <!--                              tương ưng trên mỗi ô input cần khai báo formControlName tương ứng để sử dụng Form trong angular đẻ validate các trường-->
                 <input autofocus type="text" id="inputUsername" class="form-control"
                        placeholder="Tên tài khoản" formControlName="accountName">
-                <!--                                <span style="color: red"-->
-                <!--                                      *ngIf="(formGroup.controls.accountName.touched) && formGroup.controls.accountName.hasError('required')"> </span>-->
 
                 <label class="form-label" for="inputUsername">
+                <span style="color: red ; font-weight: bold; font-size: 15px; margin-left: 5px"
+                      *ngIf="formGroup.controls.accountName.touched && formGroup.controls.accountName.hasError('required')"> Tên đăng nhập không được để trống</span>
+                  <span style="color: red ; font-weight: bold; font-size: 15px; margin-left: 5px"
+                        *ngIf="formGroup.touched  && formGroup.controls.accountName.hasError('pattern')"> Tên đăng nhập không hợp lệ</span>
 
                 </label>
               </div>
@@ -26,6 +28,8 @@
                        placeholder="Mật khẩu" formControlName="password">
 
                 <label class="form-label" for="inputPassword">
+                  <span style="color: red ; font-weight: bold; font-size: 15px; margin-left: 5px"
+                        *ngIf="formGroup.controls.password.touched && formGroup.controls.password.hasError('required')">  Mật khẩu không được để trống </span>
                 </label>
               </div>
               <div class="custom-control custom-checkbox mb-3">
