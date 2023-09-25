@@ -30,6 +30,7 @@
                 <label class="form-label" for="inputPassword">
                   <span style="color: red ; font-weight: bold; font-size: 15px; margin-left: 5px"
                         *ngIf="formGroup.controls.password.touched && formGroup.controls.password.hasError('required')">  Mật khẩu không được để trống </span>
+                  <span *ngIf="formGroup.controls.password.touched && formGroup.controls.password.hasError('minLength')"></span>
                 </label>
               </div>
               <div class="custom-control custom-checkbox mb-3">

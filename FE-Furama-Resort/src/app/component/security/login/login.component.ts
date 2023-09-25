@@ -55,6 +55,7 @@ export class LoginComponent implements OnInit {
         //  nếu có, nó sẽ lấy thông tin về vai trò (roles) và tên người dùng từ token đó
         //  và gán chúng vào các biến this.roles và this.accountName
         if (this.tokenStorage.getToken()) {
+            console.log("Hàm ngOnInit :" + this.tokenStorage.getUser())
             this.roles = this.tokenStorage.getUser().roles;
             this.accountName = this.tokenStorage.getUser().username;
         }
@@ -72,6 +73,7 @@ export class LoginComponent implements OnInit {
                     this.tokenStorage.saveUserLocal(data);
                     //   nếu ko thì token sẽ được lưu trữ trong session storage
                 } else {
+                    console.log("token data : " + data.token)
                     this.tokenStorage.saveTokenSession(data.token);
                     this.tokenStorage.saveUserLocal(data);
                 }
