@@ -47,7 +47,8 @@ export class HeaderCommonComponent implements OnInit {
   logOut() {
     this.tokenStorage.singOut();
     // load lại header
-    window.location.reload();
+    this.router.navigateByUrl('/login')
+    // window.location.reload();
   }
 
 }

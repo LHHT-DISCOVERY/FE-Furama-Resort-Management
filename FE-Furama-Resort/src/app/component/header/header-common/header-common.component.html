@@ -78,7 +78,7 @@
                                 <a class="dropdown-item user-profile-management" (click)="toLogin()">Đăng nhập</a></li>
 
                             <!--            hidden chữ đăng xuất  =>  [hidden]="!isLogin" => nếu trang thái chưa dăng nhâp -->
-                            <li *ngIf="role.includes('ROLE_ADMIN')"><a href="/management"
+                            <li *ngIf="role.includes('ROLE_ADMIN')"><a href="/customer-management/list"
                                                                        class="dropdown-item user-profile-management">Bảng
                                 Quản Lý</a></li>
                             <li [hidden]="!isLogin">

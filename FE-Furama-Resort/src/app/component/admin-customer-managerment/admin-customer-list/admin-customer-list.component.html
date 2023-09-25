@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Danh sách thành viên</title>
+</head>
+<body class="background">
+
+<div class="container py-2">
+    <app-header-admin></app-header-admin>
+    <!--    Sidebar      -->
+    <div class="row">
+        <div class="col-lg-3">
+            <app-slidebar></app-slidebar>
+        </div>
+
+        <!--       Main        -->
+        <div class="col-lg-9 ">
+            <div class="card background-card-list">
+                <div class="bg-light d-flex card card-header p-3 mb-4 text-uppercase display fw-bold">
+                    <div class="row align-items-center">
+                        <div class="col-6">Danh sách khách hàng thành viên</div>
+
+                        <div class="col-6">
+                            <form role="search" class="d-flex">
+                                <input #search type="search" name="search" class="form-control bg-light my-1"
+                                       placeholder="Tìm kiếm theo tên, CMND, email hoặc SĐT"
+                                       aria-label="Search">
+                                <button class="btn my-1 mx-1" style="background-color: #54B435; color: white"
+                                >
+                                    <i class="bi bi-search"></i>
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="col-2">
+                        <button class="bg-sub btn" routerLink="/employee_management/addEmployee">
+                            <i class="bi bi-person-plus-fill" style="width: 100px"> Thêm mới</i>
+                        </button>
+                    </div>
+                </div>
+                <div class="card-body ">
+
+                    <!--   Table of list-->
+                    <div class="table-responsive table-bordered rounded">
+                        <table class="table table-striped table-hover text-center">
+                            <thead style="background-color: #54B435; color: #fff;">
+                            <tr>
+                                <th>#</th>
+                                <th>Mã thành viên</th>
+                                <th width="auto">Tên thành viên</th>
+                                <th>Số CMND</th>
+                                <th>Email</th>
+                                <th>Số điện thoại</th>
+                                <th>Địa chỉ</th>
+                                <th>Sửa</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <th>1</th>
+                                <td>KH-0001</td>
+                                <td style="text-align: left">Tran Van Thai</td>
+                                <td>7862378263742</td>
+                                <td style="text-align: left">thai@gmail.com</td>
+                                <td>267534672</td>
+                                <td style="text-align: left">Nghia Dan , Nghe An</td>
+                                <td class="px-4">
+                                    <div class="btn-group" role="group" aria-label="Basic mixed styles example">
+                                        <a href="customer-management/update/...">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                 fill="currentColor" class="bi bi-pencil-square edit"
+                                                 viewBox="0 0 16 16">
+                                                <path
+                                                        d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z"/>
+                                                <path fill-rule="evenodd"
+                                                      d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5v11z"/>
+                                            </svg>
+                                        </a>
+                                    </div>
+                                </td>
+                            </tr>
+                            </tbody>
+                        </table>
+                        <b class="my-2">Hiển thị 1/1 kết quả</b>
+                        <!--  New Paginate  -->
+                        <!--                        <div style="margin-top: 10px">-->
+                        <!--                            <ul class="pagination justify-content-center mb-3">-->
+                        <!--                                <li class="page-item">-->
+                        <!--                                    <a >-->
+                        <!--                                        <i class="fa-solid fa-backward-fast"-->
+                        <!--                                           >0</i>-->
+                        <!--                                    </a>-->
+
+                        <!--                                </li>-->
+                        <!--                                <li>-->
+                        <!--                                    <a >-->
+                        <!--                                        <i class="fa-solid fa-backward"-->
+                        <!--                                           >45</i>-->
+                        <!--                                    </a>-->
+                        <!--                                </li>-->
+                        <!--                                <li class="page-item" >-->
+                        <!--                                    <a-->
+                        <!--                                       >-->
+                        <!--                                        4-->
+                        <!--                                    </a>-->
+                        <!--                                </li>-->
+                        <!--                                <li>-->
+                        <!--                                    <a >-->
+                        <!--                                        <i class="fa-solid fa-forward"-->
+                        <!--                                           >3</i>-->
+                        <!--                                    </a>-->
+                        <!--                                </li>-->
+                        <!--                                <li class="page-item">-->
+                        <!--                                    <a-->
+                        <!--                                       >-->
+                        <!--                                        <i class="fa-solid fa-forward-fast">2</i> </a>-->
+                        <!--                                </li>-->
+                        <!--                                <li class="page-item">-->
+                        <!--                                    <div class="input-group rounded">-->
+                        <!--                                        <input type="search" class="form-control rounded"-->
+                        <!--                                               placeholder="chọn trong 9 trang"-->
+                        <!--                                               #element-->
+                        <!--                                               id="pageChoice"-->
+                        <!--                                               aria-label="Search" aria-describedby="search-addon"/>-->
+                        <!--                                        <span class="input-group-text border-0" id="search-addon">-->
+                        <!--                          <button class="btn">-->
+                        <!--                             <i class="bi bi-search bg-icon"-->
+                        <!--                                ></i>-->
+                        <!--                          </button>-->
+                        <!--                        </span>-->
+                        <!--                                    </div>-->
+                        <!--                                </li>-->
+                        <!--                            </ul>-->
+                        <!--                        </div>-->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+</body>
+</html>
+

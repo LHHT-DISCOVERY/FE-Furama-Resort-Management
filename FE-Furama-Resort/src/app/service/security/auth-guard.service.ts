@@ -16,7 +16,7 @@ export class AuthGuardService implements CanActivate {
             return false;
         }
         if (this.tokenStorageService.isLogin()) {
-            switch (this.tokenStorageService.getUser().role[0]) {
+            switch (this.tokenStorageService.getUser().roles[0]) {
                 case "ROLE_ADMIN":
                 case "ROLE_EMPLOYEE":
                 case "ROLE_USER":

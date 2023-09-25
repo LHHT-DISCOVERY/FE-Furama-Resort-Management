@@ -1,19 +1,20 @@
-import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import {SlidebarComponent} from "./slidebar.component";
-import {RouterModule} from "@angular/router";
+import {NgModule} from '@angular/core';
+import {SlidebarComponent} from './slidebar.component';
+import {RouterLink} from "@angular/router";
+import {CommonModule} from "@angular/common";
 
 
 @NgModule({
-  declarations: [
-    SlidebarComponent
-  ],
-  imports: [
-    CommonModule,
-    RouterModule
-  ],
-  exports:[
-    SlidebarComponent
-  ]
+    declarations: [
+        SlidebarComponent,
+    ],
+    imports: [
+        CommonModule,
+        RouterLink,
+    ],
+    exports: [
+        SlidebarComponent
+    ]
 })
-export class SlidebarModule { }
+export class SlidebarModule {
+}

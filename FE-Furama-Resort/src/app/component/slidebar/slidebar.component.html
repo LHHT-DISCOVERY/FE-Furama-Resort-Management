@@ -4,7 +4,7 @@
             <ul class="nav nav-pills flex-column flex-shrink-0 mb-auto">
 
                 <li>
-                    <a #a1 href="/ticket_management/select_ticket_user" [ngClass]="{'nav-link link-dark': true, 'active': activePage.includes(a1.href)}"
+                    <a #a1 href="/contract_management/select_contract_user" [ngClass]="{'nav-link link-dark': true, 'active': activePage.includes(a1.href)}"
                        (click)="changeColor(a1.href)">
                         <img src="assets/image/quan-ly-ban-ve.png" height="20" width="20"/>
                         Quản lý đặt phòng
@@ -52,7 +52,7 @@
                             <li><a #a7 class="dropdown-item" href="/statistic/movie-type-statistic" (click)="changeColor(a7.href)"
                                    [ngClass]="{'nav-link link-dark': true, 'active': activePage.includes(a7.href)}">Thống kê thể loại phòng</a></li>
                             <li><a #a8 class="dropdown-item" href="/statistic/showtime-statistic" (click)="changeColor(a8.href)"
-                                   [ngClass]="{'nav-link link-dark': true, 'active': activePage.includes(a8.href)}">Thống kê suất đặt phòng</a></li>
+                                   [ngClass]="{'nav-link link-dark': true, 'active': activePage.includes(a8.href)}">Thống kê suất thuê phòng</a></li>
                         </ul>
                     </div>
                 </li>
@@ -61,6 +61,5 @@
         </div>
     </div>
 </div>
-
 
 

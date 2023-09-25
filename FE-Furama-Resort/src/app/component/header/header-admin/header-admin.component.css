@@ -30,3 +30,11 @@ body{
 .user-profile{
   margin-right: 150px;
 }
+
+.logout-hover:hover{
+  background-color: #54B435;
+  color: white;
+  cursor: pointer;
+}
+
+
