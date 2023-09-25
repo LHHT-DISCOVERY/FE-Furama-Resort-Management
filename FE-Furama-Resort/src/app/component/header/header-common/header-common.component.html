@@ -1,107 +1,114 @@
 <header class="home">
-  <!-- navbar-expand Hiệu ứng mobile-->
-  <nav class="navbar navbar-expand-lg navbar-light">
-    <div class="container-fluid header-sd">
-      <div class="col-md-2 my-4">
-        <a class="navbar-brand" href="#">
-          <img src="assets/images/logo.png" alt="A04Cinema" width="200" height="55">
-        </a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                data-bs-target="#navbarSupportedContent"
-                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-      </div>
-
-      <div class="col-md-10 ">
-        <div class="collapse navbar-collapse " id="navbarSupportedContent">
-          <ul class="navbar-nav me-auto d-flex align-items-center">
-            <li class="nav-item text-uppercase  mx-2">
-              <a class="nav-link" style="cursor: pointer;">Trang chủ</a>
-            </li>
-            <li class="nav-item text-uppercase  mx-2">
-              <a class="nav-link" style="cursor: pointer;">Đặt Phòng</a>
-            </li>
-            <li class="nav-item dropdown text-uppercase  mx-2">
-              <a class="nav-link dropdown-toggle  " href="#" id="navbarDropdown" role="button"
-                 data-bs-toggle="dropdown"
-                 aria-expanded="false">
-                Phòng
-              </a>
-              <ul class="dropdown-menu my-0" aria-labelledby="navbarDropdown">
-                <li><a class="dropdown-item booking" style="cursor: pointer;">Phòng VIP</a></li>
-                <li><a class="dropdown-item booking" style="cursor: pointer;">Phòng Standard</a></li>
-              </ul>
-            </li>
-            <li class="nav-item text-uppercase  mx-2">
-              <a class="nav-link" style="cursor: pointer;">Khuyến mãi</a>
-            </li>
-            <li class="nav-item text-uppercase  mx-2">
-              <a class="nav-link" style="cursor: pointer;">Hỗ trợ</a>
-            </li>
-
-            <li class="nav-item text-uppercase mx-2">
-              <!--              custom search in header-->
-              <div class=" mx-4 search-container">
-                <input type="search" class="form-control bg-light search-input " style="border-radius: 15px"
-                       placeholder="  Tìm kiếm tên Phòng..."
-                >
-                <button class="btn search-button" style="background-color: #54B435; color: white; border-radius: 15px"
-                >
-                  <i class="bi bi-search"></i>
+    <!-- navbar-expand Hiệu ứng mobile-->
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container-fluid header-sd">
+            <div class="col-md-2 my-4">
+                <a class="navbar-brand" href="#">
+                    <img src="assets/images/logo.png" alt="A04Cinema" width="200" height="55">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarSupportedContent"
+                        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
                 </button>
-              </div>
-            </li>
-          </ul>
-          <div class="dropdown mx-lg-6 user-profile d-flex justify-content-start" [hidden]="!isLogin">
-            <!--             ẩn các phần t dưới nếu chưa đăng nhập-->
-            <a href="#" class="d-flex align-items-center link-dark text-decoration-none dropdown-toggle"
-               id="dropdownUser" data-bs-toggle="dropdown" aria-expanded="false">
-              <img src="assets/image/account.png" alt="" width="32px" height="32px" class="rounded-circle me-2">
-              <!-- Nội dung bạn muốn hiển thị khi role chứa ROLE_ADMIN -->
-              <strong style="color: red ; font-size: 15px"
-                      *ngIf="role.includes('ROLE_ADMIN')">Admin: <span
-                style="color: white">{{accountName}}</span></strong>
-              <strong style="color: #46da4b" *ngIf="role.includes('ROLE_USER')">K.hàng: <span
-                style="color: white">{{accountName}}</span></strong>
-              <strong style="color: #54B435" *ngIf="role.includes('ROLE_EMPLOYEE')">N.Viên: <span
-                style="color: white">{{accountName}}</span></strong>
-            </a>
-            <ul class="dropdown-menu text-small" aria-labelledby="dropdownUser1"
-            >
+            </div>
 
-              <!--               hidden chữ đăng nhập => [hidden]="isLogin" => trạng thái đã đăng nhập -->
-              <li [hidden]="isLogin">
-                <a class="dropdown-item user-profile-management" (click)="toLogin()">Đăng nhập</a></li>
+            <div class="col-md-10 ">
+                <div class="collapse navbar-collapse " id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto d-flex align-items-center">
+                        <li class="nav-item text-uppercase  mx-2">
+                            <a class="nav-link" style="cursor: pointer;">Trang chủ</a>
+                        </li>
+                        <li class="nav-item text-uppercase  mx-2">
+                            <a class="nav-link" style="cursor: pointer;">Đặt Phòng</a>
+                        </li>
+                        <li class="nav-item dropdown text-uppercase  mx-2">
+                            <a class="nav-link dropdown-toggle  " href="#" id="navbarDropdown" role="button"
+                               data-bs-toggle="dropdown"
+                               aria-expanded="false">
+                                Phòng
+                            </a>
+                            <ul class="dropdown-menu my-0" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item booking" style="cursor: pointer;">Phòng VIP</a></li>
+                                <li><a class="dropdown-item booking" style="cursor: pointer;">Phòng Standard</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item text-uppercase  mx-2">
+                            <a class="nav-link" style="cursor: pointer;">Khuyến mãi</a>
+                        </li>
+                        <li class="nav-item text-uppercase  mx-2">
+                            <a class="nav-link" style="cursor: pointer;">Hỗ trợ</a>
+                        </li>
 
-              <!--            hidden chữ đăng xuất  =>  [hidden]="!isLogin" => nếu trang thái chưa dăng nhâp -->
-              <li [hidden]="!isLogin">
-                <a class="dropdown-item user-profile-management" (click)="logOut()">Đăng xuất</a></li>
+                        <li class="nav-item text-uppercase mx-2">
+                            <!--              custom search in header-->
+                            <div class=" mx-4 search-container">
+                                <input type="search" class="form-control bg-light search-input "
+                                       style="border-radius: 15px"
+                                       placeholder="  Tìm kiếm tên Phòng..."
+                                >
+                                <button class="btn search-button"
+                                        style="background-color: #54B435; color: white; border-radius: 15px"
+                                >
+                                    <i class="bi bi-search"></i>
+                                </button>
+                            </div>
+                        </li>
+                    </ul>
+                    <div class="dropdown mx-lg-6 user-profile d-flex justify-content-start" [hidden]="!isLogin">
+                        <!--             ẩn các phần t dưới nếu chưa đăng nhập-->
+                        <a href="#" class="d-flex align-items-center link-dark text-decoration-none dropdown-toggle"
+                           id="dropdownUser" data-bs-toggle="dropdown" aria-expanded="false">
+                            <img src="assets/image/account.png" alt="" width="32px" height="32px"
+                                 class="rounded-circle me-2">
+                            <!-- Nội dung bạn muốn hiển thị khi role chứa ROLE_ADMIN -->
+                            <strong style="color: red ; font-size: 15px"
+                                    *ngIf="role.includes('ROLE_ADMIN')">Admin: <span
+                                    style="color: white">{{accountName}}</span></strong>
+                            <strong style="color: #46da4b" *ngIf="role.includes('ROLE_USER')">K.hàng: <span
+                                    style="color: white">{{accountName}}</span></strong>
+                            <strong style="color: #54B435" *ngIf="role.includes('ROLE_EMPLOYEE')">N.Viên: <span
+                                    style="color: white">{{accountName}}</span></strong>
+                        </a>
+                        <ul class="dropdown-menu text-small" aria-labelledby="dropdownUser1"
+                        >
 
-            </ul>
-          </div>
+                            <!--               hidden chữ đăng nhập => [hidden]="isLogin" => trạng thái đã đăng nhập -->
+                            <li [hidden]="isLogin">
+                                <a class="dropdown-item user-profile-management" (click)="toLogin()">Đăng nhập</a></li>
+
+                            <!--            hidden chữ đăng xuất  =>  [hidden]="!isLogin" => nếu trang thái chưa dăng nhâp -->
+                            <li [hidden]="!isLogin">
+                                <a class="dropdown-item user-profile-management" (click)="logOut()">Đăng xuất</a></li>
+
+                        </ul>
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
+    </nav>
+    <div class="col-lg-12">
+        <div class="content-introduction-1">
+            <h1 class="title "> Khám phá Hành trình Độc Đáo với Chúng Tôi! </h1>
+            <p class="introduction">Bạn muốn biến chuyến du lịch của mình thành một kỷ niệm đáng nhớ? Hãy để LHHT's
+                Paradise
+                Palms Hotel đồng hành cùng
+                bạn! Chúng tôi tự hào là một trong những đơn vị hàng đầu cung cấp dịch vụ du lịch và đặt phòng khách sạn
+                chất
+                lượng cao.</p>
+        </div>
+        <div class="content-introduction-2">
+            <h1 class="title"> Dịch Vụ Du Lịch Tuyệt Vời </h1>
+            <p class="introduction">
+                Chúng tôi cung cấp một loạt các tour du lịch đa dạng, từ những chuyến đi thám hiểm mạo hiểm đến những
+                hành
+                trình
+                thư giãn tại các điểm đẹp như thiên đàng. Với hướng dẫn viên chuyên nghiệp và dịch vụ chu đáo, bạn sẽ có
+                cơ
+                hội
+                khám phá vẻ đẹp tự nhiên, văn hóa và ẩm thực tại mọi nơi bạn đến.
+            </p>
+        </div>
     </div>
-  </nav>
-  <div class="col-lg-12">
-    <div class="content-introduction-1">
-      <h1 class="title "> Khám phá Hành trình Độc Đáo với Chúng Tôi! </h1>
-      <p class="introduction">Bạn muốn biến chuyến du lịch của mình thành một kỷ niệm đáng nhớ? Hãy để LHHT's Paradise
-        Palms Hotel đồng hành cùng
-        bạn! Chúng tôi tự hào là một trong những đơn vị hàng đầu cung cấp dịch vụ du lịch và đặt phòng khách sạn chất
-        lượng cao.</p>
-    </div>
-    <div class="content-introduction-2">
-      <h1 class="title"> Dịch Vụ Du Lịch Tuyệt Vời </h1>
-      <p class="introduction">
-        Chúng tôi cung cấp một loạt các tour du lịch đa dạng, từ những chuyến đi thám hiểm mạo hiểm đến những hành
-        trình
-        thư giãn tại các điểm đẹp như thiên đàng. Với hướng dẫn viên chuyên nghiệp và dịch vụ chu đáo, bạn sẽ có cơ
-        hội
-        khám phá vẻ đẹp tự nhiên, văn hóa và ẩm thực tại mọi nơi bạn đến.
-      </p>
-    </div>
-  </div>
 </header>
 
